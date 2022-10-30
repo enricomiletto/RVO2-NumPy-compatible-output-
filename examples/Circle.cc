@@ -72,7 +72,7 @@ void setupScenario(
    * opposite side of the environment. */
   for (std::size_t i = 0U; i < 20U; ++i) {
     simulator->addAgent(
-        10.0F *
+        25.0F *
         RVO::Vector2(std::cos(static_cast<float>(i) * RVO_TWO_PI * 0.05F),
                      std::sin(static_cast<float>(i) * RVO_TWO_PI * 0.05F)));
     goals.push_back(-simulator->getAgentPosition(i));
