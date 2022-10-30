@@ -87,7 +87,13 @@ void updateVisualization(RVO::RVOSimulator *simulator) {
 
   /* Output the current position of all the agents. */
   for (std::size_t i = 0U; i < simulator->getNumAgents(); ++i) {
-    std::cout << " " << (simulator->getAgentPosition(i)).x();
+    std::cout  << (simulator->getAgentPosition(i)).x()<< ",";
+  }
+
+  std::cout << std::endl;
+  
+  for (std::size_t i = 0U; i < simulator->getNumAgents(); ++i) {
+    std::cout  << (simulator->getAgentPosition(i)).y()<< ",";
   }
 
   std::cout << std::endl;
