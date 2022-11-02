@@ -63,7 +63,7 @@ void setupScenario(
     RVO::RVOSimulator *simulator,
     std::vector<RVO::Vector2> &goals) { /* NOLINT(runtime/references) */
   /* Specify the global time step of the simulation. */
-  simulator->setTimeStep(0.25F);
+  simulator->setTimeStep(0.025F);
 
   /* Specify the default parameters for agents that are subsequently added. */
   simulator->setAgentDefaults(15.0F, 10U, 10.0F, 10.0F, 1.5F, 2.0F);
@@ -74,7 +74,7 @@ void setupScenario(
     simulator->addAgent(
         3.0F *
         RVO::Vector2(std::cos(static_cast<float>(i+1) * RVO_TWO_PI * 0.26F),
-                     std::sin(static_cast<float>(i+1) * RVO_TWO_PI * 0.25F)));
+                     std::sin(static_cast<float>(i+1) * RVO_TWO_PI * 0.3F)));
     goals.push_back(-simulator->getAgentPosition(i));
   }
 }
