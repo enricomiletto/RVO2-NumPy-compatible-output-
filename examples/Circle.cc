@@ -66,7 +66,7 @@ void setupScenario(
   simulator->setTimeStep(0.025F);
 
   /* Specify the default parameters for agents that are subsequently added. */
-  simulator->setAgentDefaults(15.0F, 10U, 10.0F, 10.0F, 1.5F, 2.0F);
+  simulator->setAgentDefaults(15.0F, 10U, 1000.0F, 1000.0F, 1.5F, 2.0F);
 
   /* Add agents, specifying their start position, and store their goals on the
    * opposite side of the environment. */
