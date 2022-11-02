@@ -70,11 +70,11 @@ void setupScenario(
 
   /* Add agents, specifying their start position, and store their goals on the
    * opposite side of the environment. */
-  for (std::size_t i = 0U; i < 2U; ++i) {
+  for (std::size_t i = 0U; i < 5U; ++i) {
     simulator->addAgent(
         6.0F *
-        RVO::Vector2(std::cos(static_cast<float>(i) * RVO_TWO_PI * 0.53F),
-                     std::sin(static_cast<float>(i) * RVO_TWO_PI * 0.48F)));
+        RVO::Vector2(std::cos(static_cast<float>(i) * RVO_TWO_PI * 0.22F),
+                     std::sin(static_cast<float>(i) * RVO_TWO_PI * 0.19F)));
     goals.push_back(-simulator->getAgentPosition(i));
   }
 }
