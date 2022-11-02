@@ -202,11 +202,18 @@ void setupScenario(
 #if RVO_OUTPUT_TIME_AND_POSITIONS
 void updateVisualization(RVO::RVOSimulator *simulator) {
   /* Output the current global time. */
-  std::cout << simulator->getGlobalTime();
+  // line removed
+  //std::cout << simulator->getGlobalTime();
 
   /* Output the current position of all the agents. */
   for (std::size_t i = 0U; i < simulator->getNumAgents(); ++i) {
-    std::cout << " " << simulator->getAgentPosition(i);
+    std::cout  << (simulator->getAgentPosition(i)).x()<< ",";
+  }
+
+  std::cout << std::endl;
+  
+  for (std::size_t i = 0U; i < simulator->getNumAgents(); ++i) {
+    std::cout  << (simulator->getAgentPosition(i)).y()<< ",";
   }
 
   std::cout << std::endl;
